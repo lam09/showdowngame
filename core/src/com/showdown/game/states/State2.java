@@ -21,7 +21,7 @@ public class State2 extends State {
     }
 
     @Override
-    public void render(SpriteBatch sb) {
+    public void render(SpriteBatch sb,float delta) {
 
     }
 }

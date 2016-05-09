@@ -7,6 +7,8 @@ import com.showdown.game.ShowdownCard;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.width=ShowdownCard.WIDTH;
+		config.height=ShowdownCard.HEIGHT;
 		new LwjglApplication(new ShowdownCard(), config);
 	}
 }
