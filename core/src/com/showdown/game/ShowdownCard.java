@@ -9,10 +9,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.showdown.game.states.GameStateManager;
 import com.showdown.game.states.MenuState;
 import com.showdown.game.states.State1;
+import com.showdown.game.states.State2;
 
 public class ShowdownCard extends ApplicationAdapter {
-	public static final int WIDTH= 450;
-	public static final int HEIGHT= 750;
+	public static final int WIDTH= 1680;
+	public static final int HEIGHT= 1050;
 
 	GameStateManager gsm;
 
@@ -25,7 +26,7 @@ public class ShowdownCard extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		gsm = new GameStateManager();
 		Gdx.gl.glClearColor(1, 0, 0, 1);
-		gsm.push(new State1(gsm));
+		gsm.push(new State2(gsm));
 
 	}
 
@@ -33,6 +34,6 @@ public class ShowdownCard extends ApplicationAdapter {
 	public void render () {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		gsm.update(Gdx.graphics.getDeltaTime());
-		gsm.render(batch,Gdx.graphics.getDeltaTime());
+		gsm.render(batch, Gdx.graphics.getDeltaTime());
 	}
 }
